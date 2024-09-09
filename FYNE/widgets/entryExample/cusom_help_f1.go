@@ -1,4 +1,4 @@
-package widgets
+package ExtryExample
 
 import (
 	"fmt"
@@ -22,7 +22,7 @@ func (c *CustomEntry) TypedKey(key *fyne.KeyEvent) {
 	}
 }
 
-func NewCustomEntry() *CustomEntry {
+func newCustomEntryHelpF1() *CustomEntry {
 	entry := &CustomEntry{}
 	entry.ExtendBaseWidget(entry)
 	return entry

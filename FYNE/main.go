@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	w "fynedemo/widgets"
+	w "fynedemo/widgets/entryExample"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
@@ -21,7 +21,7 @@ func main() {
 	})
 
 	myWindow.SetContent(w.EntryAndCustomEntry())
-	myWindow.Resize(fyne.NewSize(200, 100))
+	myWindow.Resize(fyne.NewSize(300, 200))
 	myWindow.ShowAndRun()
 
 }

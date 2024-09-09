@@ -1,4 +1,4 @@
-package widgets
+package ExtryExample
 
 import (
 	"fmt"
@@ -10,8 +10,13 @@ import (
 
 func EntryAndCustomEntry() fyne.CanvasObject {
 
+	// Entry widget
 	entry := widget.NewEntry()
-	customEntry := NewCustomEntry()
+	// CustomEntry widget
+	customEntry := newCustomEntryHelpF1()
+	entryNumeric := entryNumeric()
+
+	customEntry.SetPlaceHolder("Enter text, press F1 for Help...")
 	entry.SetPlaceHolder("Enter text...")
 
 	// when the text changes
@@ -24,6 +29,6 @@ func EntryAndCustomEntry() fyne.CanvasObject {
 		fmt.Println("Submitted :", s)
 	}
 
-	return container.NewVBox(entry, customEntry)
+	return container.NewVBox(entry, customEntry, entryNumeric)
 
 }
